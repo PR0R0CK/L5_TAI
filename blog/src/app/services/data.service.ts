@@ -14,7 +14,12 @@ export class DataService {
   }
 
   getById(id: number) {
-          return this.http.get(this.url + '/api/posts/' + id);
+    return this.http.get(this.url + '/api/posts/' + id);
   }
+
+  getByText(data: any) {
+	  return this.http.post(this.url + '/api/posts/', data);
+  }
+
 
 }
